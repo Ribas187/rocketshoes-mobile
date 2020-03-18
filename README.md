@@ -45,8 +45,8 @@ yarn react-native start
 ```
 
 ### Demo ###
-![App](demo/demo1.png)
-![App](demo/demo2.png)
+<img src='demo/demo1.png' width="400" height="800" />
+<img src='demo/demo2.png' width="400" height="800" />
 
 ## :memo: Guilherme Ribas
 Made by Guilherme Ribas.
