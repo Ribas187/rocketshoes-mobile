@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -12,7 +12,9 @@ import {
   BasketBagde,
 } from './styles';
 
-function Header({ navigation, cartSize }) {
+function Header({ navigation }) {
+  const cartSize = useSelector(state => state.cart.length);
+
   return (
     <Container>
       <LogoButton onPress={() => navigation.navigate('Home')}>
@@ -29,11 +31,6 @@ function Header({ navigation, cartSize }) {
 
 Header.propTypes = {
   navigation: PropTypes.objectOf(PropTypes.func).isRequired,
-  cartSize: PropTypes.number.isRequired,
 };
 
-const mapStateToProps = state => ({
-  cartSize: state.cart.length,
-});
-
-export default connect(mapStateToProps)(Header);
+export default Header;

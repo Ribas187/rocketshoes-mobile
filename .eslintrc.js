@@ -23,7 +23,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    'prettier'
+    'prettier',
+    'react-hooks'
   ],
   rules: {
     'prettier/prettier': 'error',
@@ -40,7 +41,10 @@ module.exports = {
     "no-console": "off",
     'react/prefer-stateless-function': [0],
     'no-param-reassign': 'off',
-    'no-return-assign': 'off'
+    'no-return-assign': 'off',
+
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
   },
 
 };
